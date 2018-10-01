@@ -1,0 +1,73 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.2                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     dev3eulerSprayFoam;
+
+//startFrom       startTime;
+startFrom       latestTime;
+
+startTime       0.0;
+
+stopAt          endTime;
+//stopAt          writeNow;
+
+
+endTime         0.3;
+
+deltaT          1.0e-08;
+
+writeControl    adjustableRunTime;
+
+writeInterval   0.1;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  10;
+
+writeCompression uncompressed;
+
+secondaryWriteControl    adjustableRunTime;
+secondaryWriteInterval    0.01;
+secondaryPurgeWrite    2;
+
+timeFormat      general;
+
+timePrecision   10;
+
+runTimeModifiable yes;
+
+adjustTimeStep  yes;
+
+maxCo           0.8;
+
+maxDeltaT       8.0e-04;
+
+libs 
+(
+//"librhoLRRRSTMRASModels.so"
+//"librhoLGRSTMRASModels.so"
+//"librhoRASModels.so"
+//"librhorealizableRASModels.so"
+"librhoLGepsmodels.so"
+//"librhoRNGRASModels.so"
+);
+
+
+
+// ************************************************************************* //

@@ -1,0 +1,382 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+
+    /*{
+        name R1;
+        type cellSet;
+        action new;
+        source fieldToCell;
+        sourceInfo
+        {
+            field          gradalpha1;
+            min         100.0;
+            max         10000.0;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action delete;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0.2 0 0);
+            p2 (100 0 0);
+            radius 100;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0.04 0 0);
+            p2 (0.2 0 0);
+            radius 0.0012;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0.2 0 0);
+            p2 (0.3 0 0);
+            radius 0.003;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0.3 0 0);
+            p2 (0.4 0 0);
+            radius 0.004;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0.4 0 0);
+            p2 (0.6 0 0);
+            radius 0.006;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0.6 0 0);
+            p2 (0.8 0 0);
+            radius 0.009;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0.8 0 0);
+            p2 (1.2 0 0);
+            radius 0.012;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (1.2 0 0);
+            p2 (1.6 0 0);
+            radius 0.015;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (1.6 0 0);
+            p2 (10.8 0 0);
+            radius 0.018;
+        }
+    }*/
+      
+    //---------------------
+    
+    {
+        name R1;
+        type cellSet;
+        action new;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v1";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v2";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v3";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v4";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v5";
+        }
+    }
+    
+    //------------------
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v10";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v11";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v12";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v13";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v14";
+        }
+    }
+    
+    //------------------
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v19";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v20";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v21";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v22";
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source zoneToCell;
+        sourceInfo
+        {
+            name ".*v23";
+        }
+    }
+    
+    //------------------
+    
+    
+    
+    {
+        name R1;
+        type cellSet;
+        action delete;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (0 0 0);
+            p2 (0.03 0 0);
+            radius 0.0006;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (-10 0 0);
+            p2 (0.0002 0 0);
+            radius 0.0009;
+        }
+    }
+    
+    {
+        name R1;
+        type cellSet;
+        action delete;
+        source cylinderToCell;
+        sourceInfo
+        {
+            p1 (-10 0 0);
+            p2 (0.0002 0 0);
+            radius 0.0004;
+        }
+    }
+    
+    //------------------
+    
+    {
+        name R1;
+        type cellSet;
+        action add;
+        source fieldToCell;
+        sourceInfo
+        {
+            field       gradalpha1;
+            min         100.0;
+            max         10000.0;
+        }
+    }
+    
+);
+
+// ************************************************************************* //

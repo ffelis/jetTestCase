@@ -1,0 +1,507 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.2                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      sampleDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+interpolationScheme cellPointFace;
+
+setFormat       raw;
+
+sets
+(
+    p-0050 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( -0.0599 -0.5 0 );
+        end     ( -0.0599 0.5 0 );
+    }
+
+    p-0040 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( -0.048 -0.5 0 );
+        end     ( -0.048 0.5 0 );
+    }
+
+    p-0030 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( -0.036 -0.5 0 );
+        end     ( -0.036 0.5 0 );
+    }
+
+    p-0020 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( -0.024 -0.5 0 );
+        end     ( -0.024 0.5 0 );
+    }
+
+    p-0010 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( -0.012 -0.5 0 );
+        end     ( -0.012 0.5 0 );
+    }
+
+    p-0005 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( -0.006 -0.5 0 );
+        end     ( -0.006 0.5 0 );
+    }
+
+    p00000 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( -0.000001 -0.5 0 );
+        end     ( -0.000001 0.5 0 );
+    }
+
+    p00001 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.0012 -0.5 0 );
+        end     ( 0.0012 0.5 0 );
+    }
+
+    p00002 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.0024 -0.5 0 );
+        end     ( 0.0024 0.5 0 );
+    }
+
+    p00005 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.006 -0.5 0 );
+        end     ( 0.006 0.5 0 );
+    }
+
+    p00010 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.012 -0.5 0 );
+        end     ( 0.012 0.5 0 );
+    }
+
+    p00020 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.024 -0.5 0 );
+        end     ( 0.024 0.5 0 );
+    }
+
+    p00030 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.036 -0.5 0 );
+        end     ( 0.036 0.5 0 );
+    }
+
+    p00040 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.048 -0.5 0 );
+        end     ( 0.048 0.5 0 );
+    }
+
+    p00050 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.060 -0.5 0 );
+        end     ( 0.060 0.5 0 );
+    }
+
+    p00060 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.072 -0.5 0 );
+        end     ( 0.072 0.5 0 );
+    }
+
+    p00070 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.084 -0.5 0 );
+        end     ( 0.084 0.5 0 );
+    }
+
+    p00080 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.096 -0.5 0 );
+        end     ( 0.096 0.5 0 );
+    }
+
+    p00090 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.108 -0.5 0 );
+        end     ( 0.108 0.5 0 );
+    }
+
+    p00100 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.120 -0.5 0 );
+        end     ( 0.120 0.5 0 );
+    }
+
+    p00120 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.144 -0.5 0 );
+        end     ( 0.144 0.5 0 );
+    }
+
+    p00140 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.168 -0.5 0 );
+        end     ( 0.168 0.5 0 );
+    }
+
+    p00160 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.192 -0.5 0 );
+        end     ( 0.192 0.5 0 );
+    }
+
+    p00180 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.216 -0.5 0 );
+        end     ( 0.216 0.5 0 );
+    }
+
+    p00200 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.240 -0.5 0 );
+        end     ( 0.240 0.5 0 );
+    }
+
+    p00220 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.264 -0.5 0 );
+        end     ( 0.264 0.5 0 );
+    }
+
+    p00240 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.288 -0.5 0 );
+        end     ( 0.288 0.5 0 );
+    }
+
+    p00260 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.312 -0.5 0 );
+        end     ( 0.312 0.5 0 );
+    }
+
+    p00280 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.336 -0.5 0 );
+        end     ( 0.336 0.5 0 );
+    }
+
+    p00300 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.360 -0.5 0 );
+        end     ( 0.360 0.5 0 );
+    }
+
+    p00320 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.384 -0.5 0 );
+        end     ( 0.384 0.5 0 );
+    }
+
+    p00340 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.408 -0.5 0 );
+        end     ( 0.408 0.5 0 );
+    }
+
+    p00360 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.432 -0.5 0 );
+        end     ( 0.432 0.5 0 );
+    }
+
+    p00380 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.456 -0.5 0 );
+        end     ( 0.456 0.5 0 );
+    }
+
+    p00400 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.480 -0.5 0 );
+        end     ( 0.480 0.5 0 );
+    }
+    
+    p00420 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.504 -0.5 0 );
+        end     ( 0.504 0.5 0 );
+    }
+
+    p00440 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.528 -0.5 0 );
+        end     ( 0.528 0.5 0 );
+    }
+
+    p00460 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.552 -0.5 0 );
+        end     ( 0.552 0.5 0 );
+    }
+
+    p00480 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.576 -0.5 0 );
+        end     ( 0.576 0.5 0 );
+    }
+
+    p00500 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.600 -0.5 0 );
+        end     ( 0.600 0.5 0 );
+    }
+
+    p00550 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.660 -0.5 0 );
+        end     ( 0.660 0.5 0 );
+    }
+
+    p00600 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.720 -0.5 0 );
+        end     ( 0.720 0.5 0 );
+    }
+
+    p00650 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.780 -0.5 0 );
+        end     ( 0.780 0.5 0 );
+    }
+
+    p00700 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.840 -0.5 0 );
+        end     ( 0.840 0.5 0 );
+    }
+
+    p00750 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.900 -0.5 0 );
+        end     ( 0.900 0.5 0 );
+    }
+
+    p00800 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 0.960 -0.5 0 );
+        end     ( 0.960 0.5 0 );
+    }
+
+    p00850 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 1.020 -0.5 0 );
+        end     ( 1.020 0.5 0 );
+    }
+
+    p00900 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 1.080 -0.5 0 );
+        end     ( 1.080 0.5 0 );
+    }
+
+    p00950 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 1.140 -0.5 0 );
+        end     ( 1.140 0.5 0 );
+    }
+
+    p01000 // x data name
+    {
+        type    face;
+        axis    y;
+        start   ( 1.19999 -0.5 0 );
+        end     ( 1.19999 0.5 0 );
+    }
+
+
+
+
+    paxis // Axial profile
+    {
+        type    face;
+        axis    x;
+        start   ( -1.0 0 0 );
+        end     ( 2.0 0 0 );
+    }
+
+);
+
+// Scalar Fields basic
+/*fields
+( 
+//alpha.water
+//k
+//epsilon
+//nut
+//ELSARho
+//ELSAD32
+//ELSASigma
+//divU
+//Ytilde
+//Ybar
+//p
+//p_rgh
+);*/
+
+// Scalar Fields advanced
+fields
+( 
+io_magS
+//io_C1
+//io_rCmu
+//io_Pk
+//io_sigma
+);
+
+// Vector Fields basic
+/*fields
+( 
+//U
+//UL
+//UG
+//F
+//fluxYtilde
+//fluxYtilde_base
+//Uibar
+);*/
+
+// Vector Fields advanced
+/*fields
+( 
+//gradp
+//gradp_rgh
+//gradalpha1
+//io_F1
+//io_F2
+//io_F3
+//io_F4
+);*/
+
+// Tensor Fields Basic
+/*fields
+( 
+//Rke
+//R
+);*/
+
+// Tensor Fields advanced
+/*fields
+( 
+//io_Pij
+//io_sigmat
+//io_devPij
+//io_devR
+//io_devSigma
+);*/
+
+
+
+// ************************************************************************* //

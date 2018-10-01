@@ -1,0 +1,48 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.3.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volSymmTensorField;
+    location    "0";
+    object      R;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform (0.002 0 0 0.002 0 0.002);
+
+boundaryField
+{
+    nozzleWall
+    {
+        type            kqRWallFunction;
+        value           uniform (0.002 0 0 0.002 0 0.002);
+    }
+    nozzleWallext
+    {
+        type            kqRWallFunction;
+        value           uniform (0.002 0 0 0.002 0 0.002);
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           uniform (2.2 0 0 2.2 0 2.2);
+    }
+    atmosphere
+    {
+        type            inletOutlet;
+        inletValue      uniform (0.002 0 0 0.002 0 0.002);
+        value           uniform (0.002 0 0 0.002 0 0.002);
+    }
+}
+
+
+// ************************************************************************* //

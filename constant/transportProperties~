@@ -1,0 +1,76 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.2                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      transportProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//Dummy transport model for R calculation
+transportModel  Newtonian;
+nu              nu [ 0 2 -1 0 0 0 0 ] 1.139e-06;
+rho             rho [ 1 -3 0 0 0 0 0 ] 999.1;
+
+// Alpha parameters:
+Dab           Dab [0 2 -1 0 0 0 0]     1e-14;
+alphatab      alphatab [0 0 0 0 0 0 0] 0.18181818; // 1/sigma_y
+
+Cy      Cy [0 0 0 0 0 0 0] 0.02455; // Rij sigmay
+Cy2      Cy2 [0 0 0 0 0 0 0] 40.7407; // Rij sigmay
+Cy3      Cy3 [0 0 0 0 0 0 0] 0.95; // Rij sigmay
+Cy4      Cy4 [0 0 0 0 0 0 0] 0.9995; // Rij sigmay
+
+turbdiff      turbdiff [0 0 0 0 0 0 0] 2.0; // Diffusion : 1 Rij | 2 Rij Prod=diss | 3 nut
+
+alphamin   alphamin [ 0 0 0 0 0 0 0 ] 1e-09;
+alphamax   alphamax [ 0 0 0 0 0 0 0 ] 0.999999999;
+
+activdiv   activdiv [ 0 0 0 0 0 0 0 ] 1.0; // divergence U tilde activator
+tmod   tmod [ 0 0 0 0 0 0 0 ] 2.0; // Turbulence mod for data save (1.0 k-e)
+
+// SIGMA (=DR) parameters:
+Dr           Dr [0 2 -1 0 0 0 0]     1e-14;
+alphatr      alphatr [0 0 0 0 0 0 0] 0.18181818; // 1/sigma_DR
+
+a0      a0 [0 0 0 0 0 0 0] 2.5;
+a1      a1 [0 0 0 0 0 0 0] 0.5;
+a2      a2 [0 0 0 0 0 0 0] 1.0;
+Cr      Cr [0 0 0 0 0 0 0] 3.2;
+
+sigma   sigma [ 1 0 -2 0 0 0 0 ] 0.07; // surface tension
+
+RDmin   RDmin [ 0 -1 0 0 0 0 0 ] 1e-14;
+RDmax   RDmax [ 0 -1 0 0 0 0 0 ] 5e6;
+
+phases (water air);
+
+water
+{
+    transportModel  Newtonian;
+    nu              nu [ 0 2 -1 0 0 0 0 ] 1.139e-06;
+    rho             rho [ 1 -3 0 0 0 0 0 ] 999.1;
+}
+
+air
+{
+    transportModel  Newtonian;
+    nu              nu [ 0 2 -1 0 0 0 0 ] 1.470e-05;
+    rho             rho [ 1 -3 0 0 0 0 0 ] 1.225;
+}
+
+// DATA for ELSA 
+#include "ELSAProperties.H"
+// ************************************************************************* //
+
+
+
+// ************************************************************************* //

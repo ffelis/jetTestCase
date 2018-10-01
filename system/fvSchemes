@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.2                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+ddtSchemes
+{
+    default         Euler;
+}
+
+gradSchemes
+{
+    default         cellMDLimited Gauss linear 0.33;
+    //default         leastSquares;
+    grad(p_rgh)     faceMDLimited Gauss linear 1;
+    grad(p)      cellMDLimited Gauss linear 1;
+}
+
+divSchemes
+{
+    //div(rhoPhi,U)  Gauss upwind;
+    div(rhoPhi,U)  Gauss linearUpwindV grad(U);
+    div(phi,alpha.water)  Gauss vanLeer01;
+
+    div(rhoPhi,k)      Gauss upwind;
+    div(rhoPhi,epsilon) Gauss upwind;
+    div(rhoPhi,R) Gauss upwind;
+    div(rhoPhi,F) Gauss upwind;
+
+    div(phi,RD)  Gauss upwind;
+    div(phi,ELSASigmaPrime) Gauss upwind;
+
+    div(R)          Gauss linear;
+
+    div(phi,nuTilda) Gauss upwind;
+
+    div((muEff*dev(T(grad(U))))) Gauss linear;
+    div((muEff*dev2(T(grad(U))))) Gauss linear;
+
+    div((rho*R)) Gauss linear;
+    div(U)  Gauss linear;
+
+    div(((rho*nu)*dev2(T(grad(U))))) Gauss linear;
+    div((((0.666667*rho)*k)*(1))) Gauss linear;
+
+    div(((((((Cy*rho)*rho)*fYtilde)|(rho*rho))*(k|epsilon))*(R&grad(alpha.water)))) Gauss linear;
+    div((((((Cy*rho)|rho)*(k|epsilon))*dev(R))&grad(alpha.water))) Gauss linear;
+    div((((((Cy*rho)|rho)*(k|epsilon))*dev((R&(1))))&grad(alpha.water))) Gauss linear;
+    div((fYtilde*fluxYtilde)) Gauss linear;
+    div((-rho*fluxYtilde)) Gauss linear;
+    div((-rho*fluxYtilde_s)) Gauss linear;
+
+    div(((((rho|(rho*Cy2))*(k|epsilon))*dev(R))&grad(alpha.water))) Gauss linear;
+    div(((((rho*(1-Cy3))|(Cy2*rho))*(k|epsilon))*(fluxYtilde&grad(U)))) Gauss linear;
+    div(((((Ybar*(1-Cy4))|(Cy2*rho))*(k|epsilon))*grad(p_rgh))) Gauss linear;
+
+    div(((((1|rho)*(1-CFblend))*rho)*F)) Gauss linear;
+}
+
+laplacianSchemes
+{
+    //         Gauss linear corrected;
+    default         Gauss linear limited corrected 0.33;
+}
+
+interpolationSchemes
+{
+    //default         linearFit 3;
+    default         linear;
+}
+
+snGradSchemes
+{
+    //default         corrected;
+    default         limited corrected 0.33;
+}
+
+fluxRequired
+{
+    default         no;
+    p_rgh;
+    alpha.water;
+}
+
+
+
+// ************************************************************************* //
